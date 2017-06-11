@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaunchActivity">
+
+    <com.jmedeisis.windowview.WindowView
+        android:id="@+id/iv_wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg_launch_logo"
+        app:wwv_horizontal_origin="0"
+        app:wwv_max_constant_translation="100dp"
+        app:wwv_max_pitch="20"
+        app:wwv_max_roll="20"
+        app:wwv_orientation_mode="Relative"
+        app:wwv_sensor_sampling_period="normal"
+        app:wwv_tilt_sensor_mode="Automatic"
+        app:wwv_translate_mode="Constant"
+        app:wwv_vertical_origin="0" />
+
+    <Button
+        android:id="@+id/btn_click_go"
+        android:layout_width="@dimen/dimen_180"
+        android:layout_height="@dimen/dimen_48"
+        android:layout_above="@+id/tv_one_word"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/dimen_32"
+        android:background="@drawable/shape_btn_corners"
+        android:onClick="goMainActivity"
+        android:paddingEnd="@dimen/dimen_16"
+        android:paddingStart="@dimen/dimen_16"
+        android:text="@string/btn_click_enter"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_14"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_one_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_tv_rect_gradient"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingBottom="@dimen/dimen_16"
+        android:paddingEnd="@dimen/dimen_16"
+        android:paddingStart="@dimen/dimen_16"
+        android:paddingTop="@dimen/dimen_04"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_12" />
+
+    <AnalogClock
+        android:layout_width="@dimen/dimen_120"
+        android:layout_height="@dimen/dimen_120"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_56"
+        android:dial="@mipmap/clock" />
+
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_btn_corners_white_border"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:text="@string/launcher_jump"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

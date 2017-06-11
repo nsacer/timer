@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="true">
+
+    <size android:height="@dimen/target_input_height" />
+
+    <solid android:color="@color/target_input_inner" />
+
+    <stroke
+        android:width="@dimen/dimen_02"
+        android:color="@color/target_input_stroke" />
+
+    <corners android:radius="@dimen/dimen_120" />
+
+</shape>

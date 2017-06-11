@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWhiteLight</item>
+
+    </style>
+
+    <!-- Activity的默认主题Theme -->
+    <style name="activityDefaultTheme" parent="AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/animActivityBottomToTop</item>
+    </style>
+
+    <!-- Activity的切换动画:从底部移动到顶部 -->
+    <style name="animActivityBottomToTop" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter_translate</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit_translate</item>
+    </style>
+
+    <!-- Activity的切换动画:从中心渐变 -->
+    <style name="animActivityAlphaCenter" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter_alpha</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit_alpha</item>
+    </style>
+
+    <!-- TextViewFZ的样式 -->
+    <style name="tv_size_16">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlackLight</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 地步菜单栏目的Fab样式 -->
+    <style name="fabMenu" parent="Widget.Design.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/dimen_16</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:tint">@color/colorWhite</item>
+        <item name="fabSize">normal</item>
+        <item name="elevation">@dimen/dimen_04</item>
+        <item name="pressedTranslationZ">@dimen/dimen_08</item>
+        <item name="android:outlineProvider">background</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- 创建新的TripItem的输入框EditText样式 -->
+    <style name="etTripItemCreate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_48</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:drawableRight">@mipmap/ic_clear_drawable</item>
+        <item name="android:drawablePadding">@dimen/dimen_08</item>
+    </style>
+
+    <!-- DatePickerDialog 滚轮样式 -->
+    <style name="DatePickerDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@android:style/TextAppearance.Holo</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:buttonBarStyle">@android:style/Holo.Light.ButtonBar.AlertDialog</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.Small</item>
+        <item name="android:listPreferredItemPaddingLeft">16dip</item>
+        <item name="android:listPreferredItemPaddingRight">16dip</item>
+    </style>
+
+    <!-- TargetDetailActivity的项目预算金额输入框样式 -->
+    <style name="tvMoneyTargetDetail">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">@color/target_text_hint</item>
+        <item name="android:textSize">@dimen/target_text_money_size</item>
+        <item name="android:textColor">@color/target_text</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:maxLength">10</item>
+    </style>
+</resources>

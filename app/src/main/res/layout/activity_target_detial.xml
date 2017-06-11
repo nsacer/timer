@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bitmap_pager"
+    tools:context="zhao.pary.timer.TargetDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_target_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_target_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <include layout="@layout/header_target_detail" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_target_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_target_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/target_fab_margin_end"
+        android:src="@mipmap/ic_done_white_24dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar_target_detail"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_32"
+                android:orientation="horizontal">
+
+                <customview.CircleRingGraph
+                    android:id="@+id/crg_total"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/target_circle_height"
+                    android:layout_weight="1"
+                    app:centerTextPrecisionBtm="2"
+                    app:centerTextPrecisionTop="2"
+                    app:circleTextBtmSize="@dimen/target_circle_text_btm_size"
+                    app:circleTextTopColor="@color/colorAccent"
+                    app:circleTextTopSize="@dimen/target_circle_text_top_size"
+                    app:progressColor="@color/circle_progress_green"
+                    app:progressRoundCap="false"
+                    app:progressWidth="@dimen/target_circle_progress_width" />
+
+                <customview.CircleRingGraph
+                    android:id="@+id/crg_daily"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/target_circle_height"
+                    android:layout_weight="1"
+                    app:centerTextPrecisionBtm="2"
+                    app:centerTextPrecisionTop="2"
+                    app:circleTextBtmSize="@dimen/target_circle_text_btm_size"
+                    app:circleTextTopColor="@color/colorPrimary"
+                    app:circleTextTopSize="@dimen/target_circle_text_top_size"
+                    app:progressColor="@color/circle_progress_green"
+                    app:progressRoundCap="false"
+                    app:progressWidth="@dimen/target_circle_progress_width" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_32"
+                android:layout_marginStart="@dimen/dimen_32"
+                android:layout_marginTop="@dimen/target_pay_margin_top"
+                android:background="@drawable/shape_target_input"
+                android:elevation="@dimen/target_input_elevation"
+                android:outlineProvider="background">
+
+                <TextSwitcher
+                    android:id="@+id/ts_day_surplus"
+                    android:layout_width="@dimen/target_pay_input_height"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:background="@drawable/shape_left_corner_right_rect"
+                    android:inAnimation="@anim/title_index_show"
+                    android:outAnimation="@anim/title_index_hide" />
+
+                <EditText
+                    android:id="@+id/et_pay_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:layout_toEndOf="@+id/ts_day_surplus"
+                    android:layout_toStartOf="@+id/iv_pay_done"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/target_pay"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/target_text"
+                    android:textColorHint="@color/target_text_hint"
+                    android:textSize="@dimen/target_pay_et_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_pay_done"
+                    android:layout_width="@dimen/target_pay_input_height"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_left_rect_right_corner"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/target_pay_iv_done_padding"
+                    android:src="@mipmap/ic_remove_white_24dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_08"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_dash_line_bill"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_marginStart="@dimen/dimen_24"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_marginEnd="@dimen/dimen_24"
+                    android:layout_marginBottom="@dimen/dimen_08"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/target_spending_bills"
+                    android:textStyle="bold"/>
+
+                <ListView
+                    android:id="@+id/list_view_pay_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_24"
+                    android:layout_marginStart="@dimen/dimen_48" />
+
+                <TextView
+                    android:id="@+id/tv_expense_total"
+                    android:layout_marginStart="@dimen/dimen_24"
+                    android:layout_marginTop="@dimen/dimen_08"
+                    android:layout_marginEnd="@dimen/dimen_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/target_expense_total"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_dash_line_bill"
+                    android:contentDescription="@null" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_chart"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_height="200dp"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

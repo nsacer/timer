@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Target</string>
+
+    <string name="switch_text_off">OFF</string>
+    <string name="switch_text_on">ON</string>
+
+    <!-- 启动页 -->
+    <string name="btn_click_enter">点击进入</string>
+    <string name="launcher_jump">跳过</string>
+
+    <!-- 信息提示 -->
+    <string name="exit_hint">退出Target?</string>
+    <string name="yes">是的</string>
+    <string name="no">取消</string>
+
+    <!-- 密码相关 -->
+    <string name="pwd_forget">忘记密码</string>
+    <string name="please_set_password">请输入密码</string>
+    <string name="please_reset_password">请再次输入密码</string>
+    <string name="pwd_not_same">输入不一致，请再次输入</string>
+    <string name="pwd_error">密码不正确，请再次输入</string>
+    <string name="pwd_correct">密码输入正确</string>
+
+    <!-- App设置 -->
+    <string name="set_app">系统设置</string>
+    <string name="set_safe">安全设置</string>
+    <string name="set_gesture_pwd">手势密码</string>
+    <string name="set_gesture_pwd_hint">开启或者关闭手势密码</string>
+    <string name="set_safe_answer">安全问题</string>
+    <string name="set_safe_answer_hint">设置问题验证，可用于找回或重置密码</string>
+    <string name="set_dialog">MaterialDialog</string>
+    <string name="set_dialog_pop">Dialog</string>
+    <string name="set_dialog_pop_hint">弹出MaterialDesign样式的Dialog</string>
+
+    <!-- 卡片任务相关 -->
+    <string name="create_a_new_trip">Create a new Target !</string>
+    <string name="trip_title_hint">项目名称（Title）</string>
+    <string name="trip_target_hint">项目目标（Target）</string>
+    <string name="trip_date_start_end">起止时间</string>
+    <string name="trip_date_start_hint">开始时间（Time Start）</string>
+    <string name="trip_date_end_hint">结束时间（Time End）</string>
+    <string name="trip_add_success">添加成功！</string>
+    <string name="trip_add_fail">添加失败！</string>
+
+    <!-- 創建任務詳情頁 -->
+    <string name="target_detail_title">新建Target</string>
+    <string name="target_money">总预算</string>
+    <string name="target_money_append">追加预算</string>
+    <string name="target_money_remove_error">数值Error</string>
+    <string name="target_time_start">起始日</string>
+    <string name="target_time_after_current">起始日至少为今日</string>
+    <string name="target_time_before_end">起始日应大于结束日</string>
+    <string name="target_time_start_first">请先选择起始日</string>
+    <string name="target_time_end">结算日</string>
+    <string name="target_time_after_must">日期小于起始日！</string>
+    <string name="target_pay">消费金额</string>
+    <string name="target_day">天</string>
+    <string name="target_spending_bills">消费账单：</string>
+    <string name="target_expense_total">消费总额：</string>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteLight">#FAFAFA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackSecond">#333333</color>
+    <color name="colorBlackLight">#424242</color>
+    <color name="colorRed">#E51C23</color>
+    <color name="colorBlue">#3285FF</color>
+    <color name="colorYellow">#FFEB3B</color>
+    <color name="colorPink">#E91EB3</color>
+    <color name="colorPurple">#9C27B0</color>
+    <color name="colorGreen">#259B24</color>
+    <color name="colorTeal">#009688</color>
+    <color name="colorOrange">#FF9800</color>
+    <color name="colorBrown">#795548</color>
+    <color name="colorGray">#9E9E9E</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorError">#ea0945</color>
+    <color name="colorTextHint">#9E9E9E</color>
+
+
+    <!-- 白色梯度透明 -->
+    <color name="white_alpha_9">#e5ffffff</color>
+    <color name="white_alpha_8">#ccffffff</color>
+    <color name="white_alpha_7">#b2ffffff</color>
+    <color name="white_alpha_6">#99ffffff</color>
+    <color name="white_alpha_5">#7fffffff</color>
+    <color name="white_alpha_4">#66ffffff</color>
+    <color name="white_alpha_3">#4cffffff</color>
+    <color name="white_alpha_2">#33ffffff</color>
+    <color name="white_alpha_1">#19ffffff</color>
+
+    <!-- 黑色梯度透明 -->
+    <color name="black_alpha_9">#e5000000</color>
+    <color name="black_alpha_8">#cc000000</color>
+    <color name="black_alpha_7">#b2000000</color>
+    <color name="black_alpha_6">#99000000</color>
+    <color name="black_alpha_5">#7f000000</color>
+    <color name="black_alpha_4">#66000000</color>
+    <color name="black_alpha_3">#4c000000</color>
+    <color name="black_alpha_2">#33000000</color>
+    <color name="black_alpha_1">#19000000</color>
+
+    <!-- TargetDetail -->
+    <color name="target_btn_done">#FF4081</color>
+    <color name="target_input_inner">#FAFAFA</color>
+    <color name="target_input_stroke">#FF4081</color>
+    <color name="target_text_hint">#9E9E9E</color>
+    <color name="target_text">#FF4081</color>
+    <color name="target_text_unable">#9E9E9E</color>
+    <color name="target_split_line">#DADADA</color>
+
+    <!-- CircleRingGraph -->
+    <color name="circle_out">#F5F5F5</color>
+    <color name="circle_in">#FAFAFA</color>
+    <color name="circle_progress">#39B2EF</color>
+    <color name="circle_text_top_color">#FF4081</color>
+    <color name="circle_text_bottom_color">#9E9E9E</color>
+    <color name="circle_split_line_color">#DADADA</color>
+    <color name="circle_progress_green">#259B24</color>
+    <color name="circle_progress_blue">#3285FF</color>
+    <color name="circle_progress_red">#E51C23</color>
+
+    <!-- Target详情页横向滑动单日情况表 -->
+    <color name="colorDailyExpenseProgress">#39B2EF</color>
+    <color name="colorDailyExpenseSecondProgress">#3285FF</color>
+</resources>

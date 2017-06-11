@@ -1,0 +1,94 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_target"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/colorBlackLight"
+    app:cardCornerRadius="@dimen/dimen_08"
+    app:cardElevation="@dimen/dimen_06">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_16">
+
+        <customview.CircleRingGraph
+            android:id="@+id/crg_total_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            app:centerTextPrecisionBtm="2"
+            app:centerTextPrecisionTop="2"
+            app:circleTextBtmSize="@dimen/target_circle_text_btm_size"
+            app:circleTextTopColor="@color/colorAccent"
+            app:circleTextTopSize="@dimen/target_circle_text_top_size"
+            app:progressColor="@color/circle_progress_green"
+            app:progressRoundCap="false"
+            app:progressWidth="@dimen/target_circle_progress_width"/>
+
+        <customview.CircleRingGraph
+            android:id="@+id/crg_daily_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            app:centerTextPrecisionBtm="2"
+            app:centerTextPrecisionTop="2"
+            app:circleTextBtmSize="@dimen/target_circle_text_btm_size"
+            app:circleTextTopColor="@color/colorPrimary"
+            app:circleTextTopSize="@dimen/target_circle_text_top_size"
+            app:progressColor="@color/circle_progress_green"
+            app:progressRoundCap="false"
+            app:progressWidth="@dimen/target_circle_progress_width"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_target_input"
+                android:elevation="@dimen/target_input_elevation"
+                android:outlineProvider="background">
+
+                <TextSwitcher
+                    android:id="@+id/ts_day_surplus"
+                    android:layout_width="@dimen/target_pay_input_height"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:background="@drawable/shape_left_corner_right_rect"
+                    android:inAnimation="@anim/title_index_show"
+                    android:outAnimation="@anim/title_index_hide" />
+
+                <EditText
+                    android:id="@+id/et_pay_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:layout_toEndOf="@+id/ts_day_surplus"
+                    android:layout_toStartOf="@+id/iv_pay_done"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="@string/target_pay"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/target_text"
+                    android:textColorHint="@color/target_text_hint"
+                    android:textSize="@dimen/target_pay_et_text_size" />
+
+                <ImageView
+                    android:id="@+id/iv_pay_done"
+                    android:layout_width="@dimen/target_pay_input_height"
+                    android:layout_height="@dimen/target_pay_input_height"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shape_left_rect_right_corner"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/target_pay_iv_done_padding"
+                    android:src="@mipmap/ic_remove_white_24dp" />
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

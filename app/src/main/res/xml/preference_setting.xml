@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title="@string/set_app"
+    android:layout="@layout/preference_setting_item">
+
+    <PreferenceCategory
+        android:title="@string/set_safe"
+        android:layout="@layout/preference_category">
+
+        <CheckBoxPreference
+            android:key="@string/set_gesture_pwd"
+            android:layout="@layout/preference_setting_item"
+            android:title="@string/set_gesture_pwd"
+            android:summary="@string/set_gesture_pwd_hint"
+            android:widgetLayout="@layout/switch_compat"/>
+
+        <CheckBoxPreference
+            android:key="@string/set_safe_answer"
+            android:layout="@layout/preference_setting_item"
+            android:title="@string/set_safe_answer"
+            android:summary="@string/set_safe_answer_hint"
+            android:widgetLayout="@layout/switch_compat"/>
+
+        <CheckBoxPreference
+            android:key="item_three"
+            android:layout="@layout/preference_setting_item"
+            android:title="这就是所谓的事不过三杂技上一"
+            android:summary="有再一再二，没有再三哦我要整一个超级"
+            android:widgetLayout="@layout/switch_compat"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/set_dialog"
+        android:layout="@layout/preference_category">
+
+        <Preference
+            android:key="@string/set_dialog_pop"
+            android:title="@string/set_dialog_pop"
+            android:summary="@string/set_dialog_pop_hint"/>
+    </PreferenceCategory>
+</PreferenceScreen>

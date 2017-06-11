@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bitmap_woody"
+    tools:context="zhao.pary.timer.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimen_120"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_64"
+            android:clipChildren="false" />
+
+        <TextSwitcher
+            android:id="@+id/ts_title"
+            android:layout_width="@dimen/dimen_72"
+            android:layout_height="@dimen/dimen_72"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:background="@drawable/shape_tv_round"
+            android:elevation="@dimen/dimen_04"
+            android:inAnimation="@anim/title_index_show"
+            android:outAnimation="@anim/title_index_hide"
+            android:outlineProvider="background" />
+
+        <LinearLayout
+            android:id="@+id/coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/dimen_16"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_menu_finger"
+                style="@style/fabMenu"
+                android:onClick="initFabFinger"
+                android:src="@mipmap/ic_fab_fingerprint" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_menu_lock"
+                style="@style/fabMenu"
+                android:onClick="initFabLock"
+                android:src="@mipmap/ic_fab_lock" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_menu_add"
+                style="@style/fabMenu"
+                android:onClick="initFabAdd"
+                android:src="@mipmap/ic_fab_add" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_menu_settings"
+                style="@style/fabMenu"
+                android:onClick="initFabSettings"
+                android:src="@mipmap/ic_fab_settings" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

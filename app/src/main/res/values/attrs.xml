@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <!-- 圆形进度条类型图表的相关属性 -->
+    <declare-styleable name="CircleRingGraph">
+        <!-- 进度条的背景色 -->
+        <attr name="progressBackgroundColor" format="color" />
+        <!-- 进度条颜色 -->
+        <attr name="progressColor" format="color" />
+        <!-- 图标的阴影颜色 -->
+        <attr name="circleShadowColor" format="color" />
+        <!-- 中心圆形的颜色 -->
+        <attr name="circleHeartColor" format="color" />
+        <!-- 进度条的宽度 -->
+        <attr name="progressWidth" format="dimension" />
+        <!-- 进度条是否显示圆形头部 -->
+        <attr name="progressRoundCap" format="boolean" />
+        <!-- 圆心显示的文字 -->
+        <attr name="circleTextTop" format="string" />
+        <!-- 圆心显示的文字颜色 -->
+        <attr name="circleTextTopColor" format="color" />
+        <!-- 圆心显示的文字大小 -->
+        <attr name="circleTextTopSize" format="dimension" />
+        <!-- 中心数据的顶部显示小数点位数 -->
+        <attr name="centerTextPrecisionTop" format="integer" />
+        <!-- 中心数据的底部显示小数点位数 -->
+        <attr name="centerTextPrecisionBtm" format="integer" />
+        <!-- 中心数据分割线的颜色 -->
+        <attr name="circleSplitLineColor" format="color" />
+        <!-- 中心数据分割线条的宽度 -->
+        <attr name="circleSplitLineWidth" format="dimension" />
+        <!-- 中心数据下部文本 -->
+        <attr name="circleTextBtm" format="string" />
+        <!-- 中心数据下部文本颜色 -->
+        <attr name="circleTextBtmColor" format="color" />
+        <!-- 中心数据下部文本字体大小 -->
+        <attr name="circleTextBtmSize" format="dimension" />
+    </declare-styleable>
+</resources>

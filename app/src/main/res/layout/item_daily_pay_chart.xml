@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="40dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/sp_10" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dimen_02"
+        android:background="@drawable/shape_dash_line_bill"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_02"
+        android:background="@drawable/shape_dash_line_bill"
+        android:contentDescription="@null" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/target_daily_expense_progress_marginTop"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateOnly="false"
+        android:maxWidth="10dp"
+        android:minWidth="10dp"
+        android:progress="80"
+        android:progressDrawable="@drawable/progress_vertical" />
+
+</LinearLayout>

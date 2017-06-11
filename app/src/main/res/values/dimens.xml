@@ -1,0 +1,88 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dimen_24_">-24dp</dimen>
+    <dimen name="dimen_16_">-16dp</dimen>
+    <dimen name="dimen_08_">-8dp</dimen>
+    <dimen name="dimen_06_">-6dp</dimen>
+    <dimen name="dimen_04_">-4dp</dimen>
+    <dimen name="dimen_02_">-2dp</dimen>
+    <dimen name="dimen_00">0dp</dimen>
+    <dimen name="dimen__1">0.1dp</dimen>
+    <dimen name="dimen__2">0.2dp</dimen>
+    <dimen name="dimen__4">0.4dp</dimen>
+    <dimen name="dimen__6">0.6dp</dimen>
+    <dimen name="dimen__8">0.8dp</dimen>
+    <dimen name="dimen_01">1dp</dimen>
+    <dimen name="dimen_02">2dp</dimen>
+    <dimen name="dimen_04">4dp</dimen>
+    <dimen name="dimen_06">6dp</dimen>
+    <dimen name="dimen_08">8dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_56">56dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
+    <dimen name="dimen_72">72dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_88">88dp</dimen>
+    <dimen name="dimen_96">96dp</dimen>
+    <dimen name="dimen_104">104dp</dimen>
+    <dimen name="dimen_112">112dp</dimen>
+    <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_180">180dp</dimen>
+    <dimen name="dimen_240">240dp</dimen>
+    <dimen name="dimen_320">320dp</dimen>
+    <dimen name="dimen_360">360dp</dimen>
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="sp_32">32sp</dimen>
+    <dimen name="sp_36">36sp</dimen>
+    <dimen name="sp_40">40sp</dimen>
+
+    <!-- Target header -->
+    <dimen name="target_line_one_margin_top">72dp</dimen>
+    <dimen name="target_input_height">40dp</dimen>
+    <!-- (target_input_height - 24) / 2 -->
+    <dimen name="target_iv_padding">8dp</dimen>
+    <dimen name="target_input_elevation">4dp</dimen>
+    <dimen name="target_text_money_size">14sp</dimen>
+    <dimen name="target_time_height">40dp</dimen>
+    <dimen name="target_time_margin_top">32dp</dimen>
+    <dimen name="target_time_iv_width">40dp</dimen>
+    <!-- (target_time_iv_width - 24) / 2 -->
+    <dimen name="target_time_iv_padding">8dp</dimen>
+    <dimen name="target_time_tv_size">14sp</dimen>
+    <!-- CircleRingGraph -->
+    <dimen name="target_circle_progress_width">14dp</dimen>
+    <dimen name="target_circle_height">180dp</dimen>
+    <dimen name="target_circle_text_top_size">22sp</dimen>
+    <dimen name="target_circle_text_btm_size">14sp</dimen>
+    <!-- 每笔消费输入 -->
+    <dimen name="target_pay_margin_top">32dp</dimen>
+    <dimen name="target_pay_input_height">48dp</dimen>
+    <!-- (target_pay_input_height - 24) / 2 -->
+    <dimen name="target_pay_iv_done_padding">12dp</dimen>
+    <dimen name="target_pay_et_text_size">18sp</dimen>
+    <!-- Target详情页消费和progress之间的分割线的高度、progress指示条marginTop高度 -->
+    <dimen name="target_daily_expense_progress_divider">1dp</dimen>
+    <dimen name="target_daily_expense_progress_marginTop">-1dp</dimen>
+
+    <dimen name="target_fab_margin_end">24dp</dimen>
+</resources>

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -100,60 +101,12 @@ public class GesturePasswordActivity extends BaseActivity {
      */
     private void initPassword() {
 
-        mPwdView = (GesturePassword) this.findViewById(R.id.mPassWordView);
+        GesturePassword mPwdView = (GesturePassword) findViewById(R.id.mPassWordView);
         mPwdView.setOnCompleteListener(new GesturePassword.OnCompleteListener() {
             @Override
             public void onComplete(String mPassword) {
 
-                //判断是否已经设置过密码
-                SharedPreferencesHelper helper = SharedPreferencesHelper.getInstance(getApplicationContext());
-                String sPassword = helper.getString(TimerSetting.GESTURE_PASSWORD, "");
-                Md5Utils md5 = new Md5Utils();
-                //如果没有则设置密码输入两次验证
-                if (sPassword.isEmpty()) {
-
-                    if (isFirstPassword) {//第一次设置密码
-
-                        mPwdView.clearPassword();
-                        isFirstPassword = false;
-                        firstPassword = mPassword;
-                        tsPwdHint.setText(mContext.getText(R.string.please_reset_password));
-                    } else {//第二次设置
-
-                        if (firstPassword.equals(mPassword)) {//密码一致
-
-                            mPwdView.clearPassword();
-                            helper.putString(TimerSetting.GESTURE_PASSWORD, md5.toMd5(mPassword, ""));
-                            setResult(TimerSetting.RESULT_CODE_OPEN_GESTURE_PWD);
-                            finish();
-                        } else {//密码不一致
-
-                            mPwdView.markError();
-                            tsPwdHint.setText(mContext.getText(R.string.pwd_not_same));
-                            ((TextViewFZ) tsPwdHint.getCurrentView()).setTextColor(
-                                    ContextCompat.getColor(mContext, R.color.colorRed));
-                        }
-
-                    }
-
-                } else {//已经设置过密码
-
-                    if (sPassword.equals(md5.toMd5(mPassword, ""))) {//输入密码正确
-
-                        if(isCloseGesturePassword)
-                            setResult(TimerSetting.RESULT_CODE_CLOSE_GESTURE_PWD);
-                        else
-                            TimerSetting.IS_GESTURE_PASSWORD_PASS = true;
-                        finish();
-                    } else {//输入密码不正确
-
-                        mPwdView.markError();
-                        tsPwdHint.setText(mContext.getText(R.string.pwd_error));
-                        ((TextViewFZ) tsPwdHint.getCurrentView()).setTextColor(
-                                ContextCompat.getColor(mContext, R.color.colorRed));
-                    }
-                }
-
+                dealWithPassword(mPassword);
             }
         });
     }
@@ -201,6 +154,61 @@ public class GesturePasswordActivity extends BaseActivity {
                     }).show();
         }
 
+    }
+
+    /**
+     * 处理密码输入
+     * */
+    private void dealWithPassword(String mPassword) {
+
+        //判断是否已经设置过密码
+        SharedPreferencesHelper helper = SharedPreferencesHelper.getInstance(getApplicationContext());
+        String sPassword = helper.getString(TimerSetting.GESTURE_PASSWORD, "");
+        Md5Utils md5 = new Md5Utils();
+        //如果没有则设置密码输入两次验证
+        if (TextUtils.isEmpty(sPassword)) {
+
+            if (isFirstPassword) {//第一次设置密码
+
+                mPwdView.clearPassword();
+                isFirstPassword = false;
+                firstPassword = mPassword;
+                tsPwdHint.setText(mContext.getText(R.string.please_reset_password));
+            } else {//第二次设置
+
+                if (firstPassword.equals(mPassword)) {//密码一致
+
+                    mPwdView.clearPassword();
+                    helper.putString(TimerSetting.GESTURE_PASSWORD, md5.toMd5(mPassword, ""));
+                    setResult(TimerSetting.RESULT_CODE_OPEN_GESTURE_PWD);
+                    finish();
+                } else {//密码不一致
+
+                    mPwdView.markError();
+                    tsPwdHint.setText(mContext.getText(R.string.pwd_not_same));
+                    ((TextViewFZ) tsPwdHint.getCurrentView()).setTextColor(
+                            ContextCompat.getColor(mContext, R.color.colorRed));
+                }
+
+            }
+
+        } else {//已经设置过密码
+
+            if (sPassword.equals(md5.toMd5(mPassword, ""))) {//输入密码正确
+
+                if(isCloseGesturePassword)
+                    setResult(TimerSetting.RESULT_CODE_CLOSE_GESTURE_PWD);
+                else
+                    TimerSetting.IS_GESTURE_PASSWORD_PASS = true;
+                finish();
+            } else {//输入密码不正确
+
+                mPwdView.markError();
+                tsPwdHint.setText(mContext.getText(R.string.pwd_error));
+                ((TextViewFZ) tsPwdHint.getCurrentView()).setTextColor(
+                        ContextCompat.getColor(mContext, R.color.colorRed));
+            }
+        }
     }
 
 }

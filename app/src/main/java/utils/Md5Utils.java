@@ -1,4 +1,3 @@
-/* Copyright (c) ViaCube.  All worldwide rights reserved. */ 
 package utils;
 
 import java.io.File;
@@ -8,9 +7,6 @@ import java.security.NoSuchAlgorithmException;
 
 public class Md5Utils {
 
-	// first argument is the password need MD5
-	// second argument is algorithm
-	// third argument is separate symbol
 	public String toMd5(String original, String separator) {
 		try {
 			String result;
@@ -25,7 +21,7 @@ public class Md5Utils {
 		}
 	}
 
-	public String toHexString(byte[] bytes, String separator) {
+	private String toHexString(byte[] bytes, String separator) {
 		StringBuilder hexString = new StringBuilder();
 		for (byte b : bytes) {
 			hexString.append(String.format("%02x", 0xFF & b)).append(separator);
@@ -34,7 +30,7 @@ public class Md5Utils {
 	}
 	
 	/** Calculate MD5 sum of a file */
-	static final public String calcMD5(File file){
+	static public String calcMD5(File file){
 		try{
 			MessageDigest md = MessageDigest.getInstance("MD5");
 	
@@ -61,11 +57,11 @@ public class Md5Utils {
 	/**
 	 * Convert an array of bytes to a string of hexadecimal numbers
 	 */
-	static final private String bytesToHexString(byte[] array) {
-		StringBuffer res = new StringBuffer();
+	private static String bytesToHexString(byte[] array) {
+		StringBuilder res = new StringBuilder();
 
-		for (int i = 0; i < array.length; i++) {
-			int val = array[i] + 256;
+		for (byte anArray : array) {
+			int val = anArray + 256;
 			String b = "00" + Integer.toHexString(val);
 			int len = b.length();
 			String sub = b.substring(len - 2);

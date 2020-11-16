@@ -220,8 +220,12 @@ public class GesturePassword extends View {
 
             for (int j = 0; j < 3; j++) {
 
-                float x = single + dou * i;
-                float y = single + dou * j;
+                //从左上第一个竖着排列(123456789)
+//                float x = single + dou * i;
+//                float y = single + dou * j;
+                //从左上第一个横着排列
+                float x = single + dou * j;
+                float y = single + dou * i;
                 mPoints[i][j] = new Point(x, y, index++);
             }
         }
